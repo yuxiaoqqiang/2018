@@ -1,0 +1,32 @@
+const int one=1,two=2,three=3;
+int num;
+void move1(int f,int t)
+{ num= num + 1;
+  printf(" ",f);
+  printf(" move to ",t); 
+  return ;
+ 
+} 
+void moven(int m,int a,int b,int c) 
+{
+  if(m==1) 
+    move1(a,c); 
+  else 
+  { 
+    moven(m-1,a,c,b); 
+    move1(a,c); 
+    moven(m-1,b,a,c); 
+  } 
+
+	return ;
+} 
+void main() 
+{ 
+ int n; 
+num = 0;
+ printf("please input the numbers of disks: "); 
+ scanf(n); 
+ printf("the step of moving disks: ",n); 
+ moven(n,one,two,three);
+printf(" ", num); 
+}

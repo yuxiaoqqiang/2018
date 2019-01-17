@@ -1,0 +1,82 @@
+const int one=1,two=2,three=3;
+int num;
+int d[10];
+void move1(int f,int t){ 
+	num= num + 1;
+	printf(" ",f);
+	printf(" move to ",t); 
+	return ;
+} 
+
+void moven(int m, int a, int b, int c) {
+	if(m==1) 
+		move1(a,c); 
+	else{ 
+		moven(m-1,a,c,b); 
+		move1(a,c); 
+		moven(m-1,b,a,c); 
+	} 
+	return ;
+}
+void sort(int i, int j){
+	int x,y,z;
+	int tmp;
+	x = i;
+	y = j;
+	z = d[(i+j)/2];
+	while(x <= y){
+		while(z < d[y]){
+			y = y - 1;
+		}	
+		while(z > d[x]){
+			x = x + 1;
+		}	
+		if(x <= y){
+			tmp=d[x];
+			d[x]=d[y];
+			d[y]=tmp;
+			x=x+1;
+			y=y-1;
+		}
+	}
+	if(x < j)
+		sort(x,j);
+	if(i < y)
+		sort(i,y);
+} 
+void main(){ 
+	int n;
+	int temp;
+	int count;
+	int choose;
+	num = 0;
+	count = 0;
+	printf("please input a num to choose your opreartion:(0 is hannota; 1 is quicksort; 2 is do nothing)");
+	scanf(choose);
+	switch(choose){
+	case 0 :{
+			printf("please input the numbers of disks: "); 
+			scanf(n); 
+			printf("the step of moving disks: ",n); 
+			moven(n,one,two,three);
+			printf(" ", num);
+			}
+	case 1 :{
+			printf("please input 10 int num: "); 
+			while(count < 10){
+				scanf(temp);
+				d[count] = temp;
+				count = count + 1;
+			}
+			sort(0,9);
+			count = 0;
+			while(count < 10){
+				printf(" ", d[count]);
+				count = count + 1;
+			}
+			}
+	case 2 :
+			printf("do nothing");
+	}
+	return;
+}

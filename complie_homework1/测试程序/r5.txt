@@ -1,0 +1,116 @@
+const int max = 100;
+const int min = -0;
+const char min_start = 'a';
+const char min_end = 'z';
+const char max_start = 'A';
+const char max_end = 'Z';
+const float pi = 3.14;
+const float text = 1.;
+
+int i;
+char c;
+float f, test;
+
+
+void error(){
+    printf("wrong!");
+}
+
+int accumulator(int n){
+    if(n > max){
+        error();
+        return (0);
+    }
+    else
+        ;
+    if(n < min){
+        error();
+        return (0);
+    }
+    if(n == 0){
+        return (i);
+    }
+    else{
+        i = i + n;
+        accumulator(n-1);
+    }
+}
+
+char transform(char s){
+    if(s >= min_start){
+        if(s <= min_end)
+            s = s - 'a' + 'A';
+        else{
+            error();
+            return ('a');
+        }
+    }
+    else{
+        if(s >= max_start){
+            if(s <= max_end)
+                s = s - 'A' + 'a';
+            else{
+                error();
+                return ('0');
+            }
+        }
+        else{
+            error();
+            return ('0');
+        }
+    }
+    return (s);
+}
+
+void print(int i){
+printf(" hello ", i);
+}
+void main(){
+    int r;
+	char temp;
+    int sum;
+    char name[11];
+    float s;
+    printf("Please input a number:(0,100)");
+    scanf(r);
+    if(r > max){
+        error();
+        return;
+    }
+    if(r < min){
+        error();
+        return;
+    }
+    printf("Please input your name(11_char):");
+    i = 0;
+    while(i < 11){
+        scanf(temp);
+		name[i] = temp;
+        i = i + 1;
+    }
+	i = 0;
+	if(r != 1)
+        sum = accumulator(r);
+    else
+        sum = r;
+    s = pi * r * r * text;
+    f = 2 * pi * r;
+    printf("print answer? Y/N&O:");
+	scanf(c);
+	i = 0;
+    switch (c){
+    case 'Y':
+        while(i < 11){
+        printf("",transform(name[i]));
+        i = i + 1;
+        }
+    case 'N':
+        printf("over");
+    case 'O':
+        printf("over");	
+    }
+	printf(" ", s);
+	printf(" ", f);
+	printf(" ", sum);
+	print(max);
+}

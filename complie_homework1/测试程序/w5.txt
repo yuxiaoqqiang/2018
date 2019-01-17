@@ -1,0 +1,44 @@
+const int a = 0, aa = 1.0;
+const char b = 1, c = 'c';
+const float d = 1. ,dd = 'dd';
+
+int f;
+char f, g, h;
+float i;
+
+void abc(){
+return (1);
+}
+int bcd(){
+}
+int cde(){
+return (1);
+}
+void main(){
+const a1 = 0;
+int b1;
+int s[10];
+b1 = 0;
+for(; b1 + 1 < b; b1 = b1 + 1){
+printf(b1);
+}
+scanf(cde());
+a = abc();
+f = abc() + a;
+s[1.0] = 0;
+s[3] = s[1] +- 1;
+s[4] = s[1] */ 2;
+while(b1){
+s[2] = s[1] + 1
+if(s[2] > 10)
+b1 = b1 -1;
+}
+switch(g){
+case 'a': {
+printf("a");
+}
+case 'b':{
+printf("b");
+}
+}
+}
