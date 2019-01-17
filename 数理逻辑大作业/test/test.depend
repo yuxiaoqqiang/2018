@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1546659480 source:e:\codeblock-project\test\data.cpp
+	"data.h"
+
+1546659486 e:\codeblock-project\test\data.h
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<string>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<math.h>
+	<typeinfo>
+	<sstream>
+
+1546659851 source:e:\codeblock-project\test\main.cpp
+	<iostream>
+	"data.h"
+
